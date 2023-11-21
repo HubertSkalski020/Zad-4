@@ -1,0 +1,15 @@
+ Zadanie: Opisać ogólnie dostępne funkcję kryptograficzne możliwe do użycia przy szyfrowaniu hasła w bazie danych
+	Funkcje Hash
+		Funkcje skrótu, nazywane także algorytmami haszującymi, są używane w celu przekształcenia jednokierunkowego hasła w krótki ciąg znaków o stałej długości, zwany skrótem. Skróty są trudne do odwrócenia, co oznacza, że nie można łatwo odzyskać oryginalnego hasła z jego skrótu. Przykłady funkcji skrótu to m.in. SHA-256, SHA-3, bcrypt i Argon2.
+
+
+			Sól, czyli unikalny losowy ciąg danych, jest dodawana do hasła przed zastosowaniem funkcji skrótu. Dodanie soli zapobiega atakom słownikowym i atakom przy użyciu tęczowych tablic, ponieważ nawet identyczne hasła będą miały różne skróty w zależności od zastosowanej soli. Przykłady soli to losowe ciągi bajtów generowane przez silnik RNG (Generator Liczb Losowych).
+
+
+			Funkcje Deriwacji Klucza (KDF) są używane do generowania dłuższych i bardziej złożonych kluczy na podstawie krótkiego hasła. Stosuje się je w celu zwiększenia bezpieczeństwa przed atakami typu brute-force. Przykłady KDF to m.in. PBKDF2, bcrypt, scrypt i Argon2.
+
+
+			Algorytmy szyfrowania są dwukierunkowe i stosowane, gdy konieczne jest przechowywanie bardziej złożonych danych niż same hasła. W przeciwieństwie do funkcji skrótu, algorytmy szyfrowania pozwalają na odzyskiwanie oryginalnych danych przy użyciu klucza. Przykłady to m.in. AES, Twofish i Blowfish.
+
+
+			Protokoły autentykacji są używane do uwierzytelniania użytkowników przed dostępem do systemu. Mogą także zawierać funkcje kryptograficzne do bezpiecznej wymiany informacji uwierzytelniającej. Przykłady to m.in. OAuth, OpenID Connect i JWT (JSON Web Tokens).
